@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		655F235F2A5C07E200DCCD17 /* Way3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655F235E2A5C07E200DCCD17 /* Way3ViewController.swift */; };
 		6567B45129ED223500BDBFD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6567B45029ED223500BDBFD6 /* AppDelegate.swift */; };
 		6567B45329ED223500BDBFD6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6567B45229ED223500BDBFD6 /* SceneDelegate.swift */; };
 		6567B45529ED223500BDBFD6 /* Way1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6567B45429ED223500BDBFD6 /* Way1ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		655F235E2A5C07E200DCCD17 /* Way3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Way3ViewController.swift; sourceTree = "<group>"; };
 		6567B44D29ED223500BDBFD6 /* UIMenu_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIMenu_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6567B45029ED223500BDBFD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6567B45229ED223500BDBFD6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				6567B45229ED223500BDBFD6 /* SceneDelegate.swift */,
 				6567B45429ED223500BDBFD6 /* Way1ViewController.swift */,
 				65D42A7429ED3A490039FAD1 /* Way2ViewController.swift */,
+				655F235E2A5C07E200DCCD17 /* Way3ViewController.swift */,
 				6567B45629ED223500BDBFD6 /* Main.storyboard */,
 				6567B45929ED223600BDBFD6 /* Assets.xcassets */,
 				6567B45B29ED223600BDBFD6 /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 			files = (
 				6567B45529ED223500BDBFD6 /* Way1ViewController.swift in Sources */,
 				65D42A7529ED3A490039FAD1 /* Way2ViewController.swift in Sources */,
+				655F235F2A5C07E200DCCD17 /* Way3ViewController.swift in Sources */,
 				6567B45129ED223500BDBFD6 /* AppDelegate.swift in Sources */,
 				6567B45329ED223500BDBFD6 /* SceneDelegate.swift in Sources */,
 			);

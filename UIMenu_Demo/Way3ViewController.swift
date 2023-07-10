@@ -1,13 +1,13 @@
 //
-//  ViewController.swift
+//  Way3ViewController.swift
 //  UIMenu_Demo
 //
-//  Created by JINSEOK on 2023/04/17.
+//  Created by JINSEOK on 2023/07/10.
 //
 
 import UIKit
 
-class Way1ViewController: UIViewController {
+class Way3ViewController: UIViewController {
     
     // MARK: - UI Properties
     let imageView: UIImageView = {
@@ -15,15 +15,7 @@ class Way1ViewController: UIViewController {
         view.image = UIImage(named: "myProfile")
         return view
     }()
-    
-    let button: UIButton = {
-        let button =  UIButton(frame: CGRect(x: 150, y: 200, width: 100, height: 40))
-        button.backgroundColor = .gray
-        button.layer.cornerRadius = 10
-        button.setTitle("Button", for: .normal)
-        return button
-    }()
-    
+
     let label: UILabel = {
         let label = UILabel(frame: CGRect(x: 150, y: 400, width: 100, height: 40))
         label.textAlignment = .center
@@ -41,16 +33,16 @@ class Way1ViewController: UIViewController {
             handler: { [unowned self] _ in
                 self.label.text = "Save"
             })
-
+        
         let delete = UIAction(
             title: "Delete",
             image: UIImage(systemName: "trash"),
             handler: { [unowned self] _ in
                 self.label.text = "Delete"
             })
-
+        
         let Items = [save, delete]
-
+        
         return Items
     }
     
@@ -58,56 +50,42 @@ class Way1ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
         view.addSubview(imageView)
-        view.addSubview(button)
         view.addSubview(label)
-//        button.addTarget(self, action: #selector(buttonHandler), for: .touchUpInside)
         
-        let interaction = UIContextMenuInteraction(delegate: self)
-        button.addInteraction(interaction)
+        self.title = "UIMenu 테스트"
+        
+        let navBarAppearance = UINavigationBarAppearance()
+        navigationController?.navigationBar.standardAppearance = navBarAppearance
+        navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+        
+        setupMenu()
     }
-    
-    // MARK: - Setup
     
     func setupMenu() {
-       
-    }
-    
-    // MARK: - Button handlers
-    
-    @objc func buttonHandler(_ sender: UIButton) {
-      
-    }
-}
-
-
-extension Way1ViewController: UIContextMenuInteractionDelegate {
-    
-    func contextMenuInteraction(_ interaction: UIContextMenuInteraction, configurationForMenuAtLocation location: CGPoint) -> UIContextMenuConfiguration? {
+        let menu = UIMenu(title: "메뉴",
+                          children: items)
         
-        return UIContextMenuConfiguration(actionProvider:  { [unowned self] suggestedActions in
-            
-            let menu = UIMenu(title: "메뉴",
-                              children: self.items)
-            
-            return menu
-        })
+        // UIBarButtonItem의 생성자를 통해 메뉴를 생성하기
+        let barButton = UIBarButtonItem(title: nil,
+                                        image: UIImage(systemName: "list.dash"),
+                                        primaryAction: nil,
+                                        menu: menu)
+  
+        navigationItem.rightBarButtonItem = barButton
     }
 }
-
-
-
 
 
 // MARK: - PreView 읽기
 import SwiftUI
 
 #if DEBUG
-struct PreView1: PreviewProvider {
+struct PreView3: PreviewProvider {
     static var previews: some View {
         // 사용할 뷰 컨트롤러를 넣어주세요
-        Way1ViewController()
+        Way2ViewController()
             .toPreview()
     }
 }

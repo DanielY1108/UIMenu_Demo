@@ -19,13 +19,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         
-        let way1 = UINavigationController(rootViewController: Way1ViewController())
-        let way2 = UINavigationController(rootViewController: Way2ViewController())
+        let way1 = Way1ViewController()
+        let way2 = Way2ViewController()
+        let way3 = UINavigationController(rootViewController: Way3ViewController())
         
         way1.title = "WAY1"
         way2.title = "WAY2"
+        way3.title = "WAY3"
         let tabBar = UITabBarController()
-        tabBar.viewControllers = [way1, way2]
+        tabBar.tabBar.backgroundColor = .lightGray
+        tabBar.viewControllers = [way1, way2, way3]
         
         window.rootViewController = tabBar
         window.makeKeyAndVisible()

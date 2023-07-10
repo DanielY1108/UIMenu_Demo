@@ -62,7 +62,7 @@ class Way2ViewController: UIViewController {
         view.addSubview(imageView)
         view.addSubview(button)
         view.addSubview(label)
-        button.addTarget(self, action: #selector(buttonHandler), for: .touchUpInside)
+//        button.addTarget(self, action: #selector(buttonHandler), for: .touchUpInside)
         
         setupMenu()
     }
@@ -88,7 +88,6 @@ class Way2ViewController: UIViewController {
     // MARK: - Button handlers
     
     @objc func buttonHandler(_ sender: UIButton) {
-       
     }
 }
 
